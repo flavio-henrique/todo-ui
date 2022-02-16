@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateComponent } from './components/create/create.component';
-import { DetailsComponent } from './components/details/details.component';
-import { ListComponent } from './components/list/list.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { CreateComponent } from './todos/components/create/create.component';
+import { DetailsComponent } from './todos/components/details/details.component';
+import { ListComponent } from './todos/components/list/list.component';
+import { LoginComponent } from './users/login/login.component';
+import { RegisterComponent } from './users/register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'todos', pathMatch: 'full' },

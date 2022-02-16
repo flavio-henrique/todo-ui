@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from 'src/app/services/todos.service';
+import { TodoService } from 'src/app/todos/services/todos.service';
 
 @Component({
   selector: 'app-list',
@@ -46,8 +46,8 @@ export class ListComponent implements OnInit {
   searchByTitle(): void {
     this.todoService.filterByTitle(this.searchTitle)
       .subscribe(
-        (books: any) => {
-          this.todos = books;
+        (todos: any) => {
+          this.todos = todos;
         },
         (error: any) => {
           console.log(error);

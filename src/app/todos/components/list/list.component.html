@@ -1,0 +1,27 @@
+<div class="list row">
+    <div class="col-md-12">
+
+        <table class="min-w-full">
+            <thead class="border-b">
+                <tr>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">#</th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Title</th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Description</th>
+                    <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let todo of todos;" class="border-b">
+                    <th>{{todo.id}}</th>
+                    <td><b>{{todo.title}}</b></td>
+                    <td>{{todo.description}}</td>
+                    <td>
+                        <button type="button" class="py-2 px-3 m-2 bg-blue-500 hover:bg-nav-hover-blue rounded-md text-white" routerLink="/todos/{{todo.id}}">Edit</button>
+                        <button type="button" class="py-2 px-3 m-2 bg-blue-500 hover:bg-nav-hover-blue rounded-md text-white" (click)="deleteTodo(todo.id)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

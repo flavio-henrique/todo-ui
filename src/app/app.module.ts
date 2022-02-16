@@ -5,11 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreateComponent } from './components/create/create.component';
-import { DetailsComponent } from './components/details/details.component';
-import { ListComponent } from './components/list/list.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { CreateComponent } from './todos/components/create/create.component';
+import { DetailsComponent } from './todos/components/details/details.component';
+import { ListComponent } from './todos/components/list/list.component';
+import { LoginComponent } from './users/login/login.component';
+import { RegisterComponent } from './users/register/register.component';
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 
 @NgModule({

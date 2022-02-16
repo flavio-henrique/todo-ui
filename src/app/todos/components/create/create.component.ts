@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoService } from 'src/app/services/todos.service';
+import { TodoService } from 'src/app/todos/services/todos.service';
 
 @Component({
   selector: 'app-create',

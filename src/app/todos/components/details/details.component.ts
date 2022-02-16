@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { TodoService } from 'src/app/services/todos.service';
+import { TodoService } from 'src/app/todos/services/todos.service';
 
 @Component({
   selector: 'app-details',
@@ -24,9 +24,9 @@ export class DetailsComponent implements OnInit {
   getTodo(id: string | null): void {
     this.todoService.getItem(id)
       .subscribe(
-        (book: null) => {
-          this.currentTodo = book;
-          console.log(book);
+        (todo: null) => {
+          this.currentTodo = todo;
+          console.log(todo);
         },
         (error: any) => {
           console.log(error);
@@ -57,6 +57,7 @@ export class DetailsComponent implements OnInit {
         response => {
           console.log(response);
           this.message = 'The product was updated!';
+          this.router.navigate(['todos']);
         },
         error => {
           console.log(error);

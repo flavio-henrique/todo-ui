@@ -9,7 +9,7 @@ import { Observable, throwError } from 'rxjs';
 export class TodoService {
 
 
-  apiUrl: string = 'http://localhost:3000/todos';
+  apiUrl: string = 'http://localhost:3000/api/todos';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
 
